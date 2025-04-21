@@ -1,53 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
 :root {
-  --cyan: #00f0ff;
-  --purple: #9a00ff;
-  --magenta: #ff007c;
-  --green: #a8ff00;
-  --black: #0a0a0a;
-  --gray: #2b2b2b;
-  --white: #ffffff;
+  --green: #00ff00;
+  --black: #000000;
+  --gray: #111111;
+  --white: #f8f8f2;
+  --dark-gray: #333333;
+  --button-contrast: #ff00ff;
 }
 
-/* Universal styles */
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Silkscreen', sans-serif;
   background-color: var(--black);
-  color: var(--white);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  color: var(--green);
+  overflow-x: hidden;
+  cursor: default;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/* Header */
+header {
+  background-color: var(--dark-gray);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--green);
 }
 
-a {
-  color: var(--cyan);
-  text-decoration: none;
-  transition: color 0.3s ease;
+header h1 {
+  margin: 0;
+  color: var(--green);
+  font-size: 3rem;
+  font-family: 'Silkscreen', sans-serif;
 }
 
-a:hover {
-  color: var(--magenta);
+.logo-image {
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 100px;
+  height: auto;
 }
 
 /* Navbar */
 .navbar {
   position: sticky;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--black);
   padding: 1rem;
-  box-shadow: 0 0 15px var(--cyan);
   display: flex;
   justify-content: center;
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
   z-index: 1000;
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled {
-  background-color: var(--black); /* Solid background when scrolling */
 }
 
 .navbar ul {
@@ -59,108 +62,162 @@ a:hover {
 }
 
 .navbar a {
-  font-weight: bold;
-  font-size: 1.2rem;
+  color: var(--green);
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid var(--green);
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: var(--green);
+  color: var(--black);
 }
 
 /* Hero Section */
-.hero-section {
-  background: url('your-hero-image.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.hero {
+  background-color: var(--gray);
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 2rem;
+  border-bottom: 1px solid var(--green);
 }
 
-.hero-section h1 {
-  font-size: 3rem;
-  color: var(--cyan);
-  text-shadow: 0 0 20px var(--cyan);
-}
-
-.hero-section h2 {
+.hero h2 {
+  color: var(--green);
   font-size: 2rem;
-  color: var(--magenta);
 }
 
-.hero-section p {
-  font-size: 1.2rem;
+.hero p {
+  font-size: 1rem;
   color: var(--white);
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem 0;
-}
-
-.cta-btn {
-  background-color: var(--magenta);
-  color: var(--white);
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: var(--cyan);
 }
 
 /* Projects Section */
 .projects {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
-  background-color: var(--gray);
 }
 
 .projects h3 {
   color: var(--green);
   font-size: 2rem;
-  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .project-card {
+  font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
   background-color: var(--black);
-  border-left: 4px solid var(--magenta);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 0 10px var(--magenta);
-  transition: transform 0.3s ease;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 1rem;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+  height: 100%;
 }
+
 
 .project-card:hover {
-  transform: scale(1.05);
+  background-color: var(--green);
+  color: var(--black);
+  transform: translateY(-5px);
+  cursor: url('images/custom_cursor_portfolio.png') 64 64, auto;
 }
 
-.project-card h4 {
-  color: var(--cyan);
-  font-size: 1.5rem;
+.project-thumbnail {
+  width: 100%;
+  height: auto; /* Maintain the native aspect ratio */
+  background-position: center;
+  background-size: contain; /* Ensure image fits inside the container */
+  border-bottom: 1px solid var(--green);
+  transition: background-image 0.3s ease;
 }
 
-.project-card p {
-  color: var(--white);
+
+
+.project-card:hover .project-thumbnail {
+  background-image: url('images/Logos_Portfolio_1_ASCII.png');
+}
+
+.project-details {
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.project-card a {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.project-card a.read-more-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--button-contrast);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 10;
+  text-decoration: none; /* Ensure it looks like a button and not a link */
+}
+
+.project-card a.read-more-button:hover {
+  background-color: var(--black);
+  color: var(--button-contrast);
+  border: 1px solid var(--button-contrast);
+}
+
+
+.project-card a[href*="youtube"]:hover {
+  background-color: var(--black);
+  color: var(--button-contrast);
+  border: 1px solid var(--button-contrast);
 }
 
 /* Contact Section */
 .contact {
   padding: 3rem 2rem;
-  background-color: var(--black);
+  background-color: var(--gray);
   text-align: center;
+  border-top: 1px solid var(--green);
 }
 
 .contact h3 {
-  color: var(--cyan);
-  font-size: 2rem;
+  color: var(--green);
 }
 
 .contact a {
   color: var(--green);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.contact a:hover {
+  background-color: var(--green);
+  color: var(--black);
+}
+
+.socials a {
+  margin: 0.5rem;
+  display: inline-block;
 }
 
 .socials a:hover {
-  color: var(--magenta);
+  color: var(--black);
+  background-color: var(--green);
 }

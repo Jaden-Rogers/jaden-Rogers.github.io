@@ -2,90 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jaden Rogers Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaden's Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <header>
+    <h1>Jaden Rogers</h1>
+    <img src="images/EsperIcon.png" alt="Jaden Rogers Logo" class="logo-image">
+
+  </header>
+
   <nav class="navbar">
     <ul>
-      <li><a href="#top">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="resume.html" target="_blank">Resume</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <header id="top" class="hero-section">
-    <h1>Jaden Rogers</h1>
-    <h2>Artist & Game Designer</h2>
-    <p>Crafting unforgettable user experiences through design and innovation.</p>
-    <a href="#projects" class="cta-btn">Explore My Work</a>
-  </header>
+  <section class="hero">
+    <img src="images/JadenProfilePicture.jpg" alt="Jaden Rogers Logo" class="logo-image">
+    <h2>ARTIST // DESIGNER</h2>
+    <p>BUILDING WORLDS // PUSHING FRONTIERS</p>
+  </section>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
+  <section id="projects" class="projects">
     <h3>Featured Projects</h3>
 
-    <div class="project-card">
-      <h4>Preservers – Iconography</h4>
-      <p>Some logos made for the various factions and personalities found in my solo game.</p>
-    </div>
+    <div class="project-cards">
 
-    <div class="project-card">
-      <h4>Sappy, A Sapling Story – Visuals Lead</h4>
-      <p>Adventure platformer created for a game jam at Boise State.</p>
-      <p><strong>Learned:</strong> Stylized art, balancing detail and simplicity.</p>
-      <p><strong>Fun:</strong> Designing a cohesive visual style across the game.</p>
-      <p><strong>Technologies:</strong> Blender, Animation, 3D Modeling, Concept Art, Maya, VFX Graph</p>
-      <a href="https://jordanralba.itch.io/sapling" target="_blank">View Project</a>
-    </div>
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img
+          class="project-thumbnail"
+          src="images/PreserversPistolThumbnail.png"
+          data-hover="images/PreserversPistolThumbnail_ASCII.png"
+          alt="Preservers Weapons Thumbnail"
+        />
+        <div class="project-details">
+          <h4>Preservers – Weapons</h4>
+          <p>
+            Created and implemented a variety of in-game weapons. Creating the weapons for this project took up a large chunk of the time developing it.
+            Whether it was the art itself or the implementation into the game engine, I became very familiar with the process of getting weapon ideas into a live game.
+          </p>
+          <p><strong>Tags:</strong> Blender, Substance Painter, Maya, Animation</p>
+          <a href="/path/to/your/project/page" class="read-more-button">Read More</a>
+        </div>
+      </div>
 
-    <div class="project-card">
-      <h4>Preservers – Weapons</h4>
-      <p>Created and implemented a variety of in-game weapons.</p>
-      <p><strong>Learned:</strong> Weapon pipeline from concept to integration.</p>
-      <p><strong>Fun:</strong> Bringing weapon ideas into a playable state.</p>
-      <p><strong>Technologies:</strong> Blender, Substance Painter, Maya, Animation, 3D Modeling</p>
-      <a href="https://www.youtube.com/watch?v=-Rd67dkZzJs" target="_blank">Watch Video</a>
-    </div>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img
+          class="project-thumbnail"
+          src="images/Logos_Portfolio_1.png"
+          data-hover="images/Logos_Portfolio_1_ASCII.png"
+          alt="Preservers Icons Thumbnail"
+        />
+        <div class="project-details">
+          <h4>Preservers – Iconography</h4>
+          <p>
+            Some logos made for the various factions and personalities found in my solo game.
+            I learned a lot more about how to use Illustrator and Photoshop to create compelling designs.
+          </p>
+          <p><strong>Tags:</strong> Illustrator, Photoshop</p>
+          <a href="/path/to/your/project/page" class="read-more-button">Read More</a>
+        </div>
+      </div>
 
-    <div class="project-card">
-      <h4>Preservers – Environment Art</h4>
-      <p>Level shown during Boise State showcase in April 2025.</p>
-      <p><strong>Learned:</strong> Using textures/trim sheets to optimize performance.</p>
-      <p><strong>Fun:</strong> Crafting the skybox and scene composition.</p>
-      <p><strong>Technologies:</strong> Blender, Maya, Substance Painter, Adobe Photoshop</p>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img
+          class="project-thumbnail"
+          src="images/WIPLevelArt_Enceladus3.png"
+          data-hover="images/WIPLevelArt_Enceladus3_ASCII.png"
+          alt="Preservers Environment Art Thumbnail"
+        />
+        <div class="project-details">
+          <h4>Preservers – Environments</h4>
+          <p>
+            The main level in the vertical slice of the game was shown to Boise State faculty in April 2025. I created all aspects of the environment, from the skybox and background to the primary and secondary assets. I learned how to efficiently use textures and trim sheets to fight memory costs.
+            
+          </p>
+          <p><strong>Tags:</strong> Blender, Maya, Substance Painter, Adobe Photoshop
+          </p>
+          <a href="/path/to/your/project/page" class="read-more-button">Read More</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img
+          class="project-thumbnail"
+          src="images/ASaplingStoryCave.png"
+          data-hover="images/ASaplingStoryCaveASCII.png"
+          alt="A Sapling Story Thumbnail"
+        />
+        <div class="project-details">
+          <h4>A Sapling Story - Visuals Lead</h4>
+          <p>
+            A short adventure platformer created by a small team for the November Game Dev Club Jam at Boise State University.
+
+            I was responsible for creating the visuals of the entire project.
+            
+            I learned how to create in a stylized art style that presented its own challenges. Chief among them being balancing simplicity and detail to create a satisfying look.
+          </p>
+          <p><strong>Tags:</strong> Blender, Animation, 3D Modeling, Concept Art, Maya, VFX Graph
+          </p>
+          <a href="/path/to/your/project/page" class="read-more-button">Read More</a>
+        </div>
+      </div>
+      <!-- Add more projects here using the same format -->
+
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
+  <section id="contact" class="contact">
     <h3>Contact</h3>
-    <p>Email: <a href="mailto:jaden.rogers25@gmail.com">jaden.rogers25@gmail.com</a></p>
+    <a href="mailto:jaden@example.com">jaden.rogers25@gmail.com</a>
     <div class="socials">
-      <a href="https://www.linkedin.com/in/jaden-rogers/" target="_blank">LinkedIn</a>
-      <a href="https://www.artstation.com/jaden_rogers" target="_blank">ArtStation</a>
-      <a href="https://github.com/Jaden-Rogers" target="_blank">GitHub</a>
-      <a href="https://linktr.ee/jadenrogers25" target="_blank">Linktree</a>
-      <a href="resume.html" target="_blank">Resume</a>
+      <a href="https://www.linkedin.com/in/jaden-rogers" target="_blank">LinkedIn</a>
+      <a href="https://github.com/jaden-rogers" target="_blank">GitHub</a>
     </div>
   </section>
 
   <script>
-    // JavaScript to handle scroll event for navbar color change
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 0) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+    // JavaScript to handle the thumbnail hover image swap
+    document.querySelectorAll('.project-thumbnail').forEach(img => {
+      const originalSrc = img.src;
+      const hoverSrc = img.getAttribute('data-hover');
+
+      img.addEventListener('mouseenter', () => {
+        img.src = hoverSrc;
+      });
+
+      img.addEventListener('mouseleave', () => {
+        img.src = originalSrc;
+      });
     });
   </script>
 
