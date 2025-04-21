@@ -3,60 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Jaden Rogers Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="resume.html" target="_blank">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="top" class="hero-section">
     <h1>Jaden Rogers</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h2>Artist & Game Designer</h2>
+    <p>Crafting unforgettable user experiences through design and innovation.</p>
+    <a href="#projects" class="cta-btn">Explore My Work</a>
   </header>
 
-  <hr>
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h3>Featured Projects</h3>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Jaden, a passionate artist and designer focused on building memorable user experiences with high polish and attention to detail. This site is a place to showcase my creative work and connect with others in the industry.</p>
-    <img src="https://cdnb.artstation.com/p/assets/images/images/079/088/553/large/jaden-rogers-slrocksfinalrenderedit-min.jpg?1723938672" alt="Portfolio banner image">
-  </section>
+    <div class="project-card">
+      <h4>Preservers – Iconography</h4>
+      <p>Some logos made for the various factions and personalities found in my solo game.</p>
+    </div>
 
-  <hr>
+    <div class="project-card">
+      <h4>Sappy, A Sapling Story – Visuals Lead</h4>
+      <p>Adventure platformer created for a game jam at Boise State.</p>
+      <p><strong>Learned:</strong> Stylized art, balancing detail and simplicity.</p>
+      <p><strong>Fun:</strong> Designing a cohesive visual style across the game.</p>
+      <p><strong>Technologies:</strong> Blender, Animation, 3D Modeling, Concept Art, Maya, VFX Graph</p>
+      <a href="https://jordanralba.itch.io/sapling" target="_blank">View Project</a>
+    </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Project One</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna vitae eros volutpat fringilla.</p>
-        <a href="https://example.com" target="_blank" class="button">View Project</a>
-      </div>
-      <div class="project">
-        <h3>Project Two</h3>
-        <p>Phasellus accumsan lacus vel facilisis volutpat. Proin laoreet, erat nec convallis pulvinar.</p>
-        <a href="https://example.com" target="_blank" class="button">View Project</a>
-      </div>
-      <div class="project">
-        <h3>Project Three</h3>
-        <p>Curabitur ac velit eu est feugiat tincidunt. Vivamus sit amet turpis sed massa sagittis tincidunt.</p>
-        <a href="https://example.com" target="_blank" class="button">View Project</a>
-      </div>
+    <div class="project-card">
+      <h4>Preservers – Weapons</h4>
+      <p>Created and implemented a variety of in-game weapons.</p>
+      <p><strong>Learned:</strong> Weapon pipeline from concept to integration.</p>
+      <p><strong>Fun:</strong> Bringing weapon ideas into a playable state.</p>
+      <p><strong>Technologies:</strong> Blender, Substance Painter, Maya, Animation, 3D Modeling</p>
+      <a href="https://www.youtube.com/watch?v=-Rd67dkZzJs" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="project-card">
+      <h4>Preservers – Environment Art</h4>
+      <p>Level shown during Boise State showcase in April 2025.</p>
+      <p><strong>Learned:</strong> Using textures/trim sheets to optimize performance.</p>
+      <p><strong>Fun:</strong> Crafting the skybox and scene composition.</p>
+      <p><strong>Technologies:</strong> Blender, Maya, Substance Painter, Adobe Photoshop</p>
     </div>
   </section>
 
-  <hr>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Want to work together or just say hi? Reach out via email below:</p>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h3>Contact</h3>
     <p>Email: <a href="mailto:jaden.rogers25@gmail.com">jaden.rogers25@gmail.com</a></p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/jaden-rogers/" target="_blank">LinkedIn</a>
+      <a href="https://www.artstation.com/jaden_rogers" target="_blank">ArtStation</a>
+      <a href="https://github.com/Jaden-Rogers" target="_blank">GitHub</a>
+      <a href="https://linktr.ee/jadenrogers25" target="_blank">Linktree</a>
+      <a href="resume.html" target="_blank">Resume</a>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Jaden Rogers. All rights reserved.</p>
-  </footer>
+  <script>
+    // JavaScript to handle scroll event for navbar color change
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
 </body>
 </html>

@@ -1,95 +1,166 @@
-/* General Page Styling */
+:root {
+  --cyan: #00f0ff;
+  --purple: #9a00ff;
+  --magenta: #ff007c;
+  --green: #a8ff00;
+  --black: #0a0a0a;
+  --gray: #2b2b2b;
+  --white: #ffffff;
+}
+
+/* Universal styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f4f4f4;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Header */
-header {
-  background: #111;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
+h1, h2, h3, h4 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 1rem;
+a {
+  color: var(--cyan);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--magenta);
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--cyan);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: var(--black); /* Solid background when scrolling */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
-/* Horizontal Rule */
-hr {
-  border: none;
-  border-top: 2px solid #ccc;
-  margin: 2rem auto;
-  max-width: 900px;
-}
-
-/* Sections */
-section {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-h2 {
-  margin-top: 0;
-  color: #444;
-}
-
-/* About Image - Responsive with Aspect Ratio */
-section img {
-  width: 100%;
-  aspect-ratio: 16 / 9; /* Adjust this to fit your image */
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin-top: 1rem;
-}
-
-
-/* Projects Grid */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.project {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
-  background: #f9f9f9;
-}
-
-/* Button Link */
-a.button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #0077cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-a.button:hover {
-  background: #005fa3;
-}
-
-/* Footer */
-footer {
+/* Hero Section */
+.hero-section {
+  background: url('your-hero-image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
+  padding: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: var(--cyan);
+  text-shadow: 0 0 20px var(--cyan);
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  color: var(--magenta);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--white);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.cta-btn {
+  background-color: var(--magenta);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--cyan);
+}
+
+/* Projects Section */
+.projects {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: var(--gray);
+}
+
+.projects h3 {
+  color: var(--green);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  background-color: var(--black);
+  border-left: 4px solid var(--magenta);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 10px var(--magenta);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h4 {
+  color: var(--cyan);
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  color: var(--white);
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 2rem;
+  background-color: var(--black);
+  text-align: center;
+}
+
+.contact h3 {
+  color: var(--cyan);
+  font-size: 2rem;
+}
+
+.contact a {
+  color: var(--green);
+}
+
+.socials a:hover {
+  color: var(--magenta);
 }
