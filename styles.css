@@ -46,14 +46,16 @@ h2 {
   color: #444;
 }
 
-/* About Image */
+/* About Image - Responsive with Aspect Ratio */
 section img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust this to fit your image */
+  object-fit: cover;
+  border-radius: 8px;
   display: block;
   margin-top: 1rem;
-  border-radius: 8px;
 }
+
 
 /* Projects Grid */
 .projects {
