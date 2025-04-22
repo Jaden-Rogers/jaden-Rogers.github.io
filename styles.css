@@ -15,62 +15,34 @@ body {
   background-color: var(--black);
   color: var(--green);
   overflow-x: hidden;
-  cursor: default;
 }
 
-/* Header */
-header {
-  background-color: var(--dark-gray);
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 1px solid var(--green);
-}
-
-header h1 {
-  margin: 0;
-  color: var(--green);
-  font-size: 3rem;
+h1, h2, h3, h4, h5 {
   font-family: 'Silkscreen', sans-serif;
 }
 
 .logo-image {
   display: block;
-  margin: 1rem auto 0 auto;
+  margin: 0 auto;
   width: 100px;
   height: auto;
 }
 
 /* Navbar */
-.navbar {
-  position: sticky;
-  top: 0;
+.custom-navbar {
   background-color: var(--black);
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
   border-top: 1px solid var(--green);
   border-bottom: 1px solid var(--green);
-  z-index: 1000;
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar a {
+.navbar-nav .nav-link {
   color: var(--green);
-  text-decoration: none;
-  padding: 0.5rem;
   border: 1px solid var(--green);
-  font-size: 1rem;
+  padding: 0.5rem 1rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar a:hover {
+.navbar-nav .nav-link:hover {
   background-color: var(--green);
   color: var(--black);
 }
@@ -78,13 +50,10 @@ header h1 {
 /* Hero Section */
 .hero {
   background-color: var(--gray);
-  padding: 3rem 2rem;
-  text-align: center;
   border-bottom: 1px solid var(--green);
 }
 
 .hero h2 {
-  color: var(--green);
   font-size: 2rem;
 }
 
@@ -95,37 +64,17 @@ header h1 {
   margin: 0 auto;
 }
 
-/* Projects Section */
-.projects {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.projects h3 {
-  color: var(--green);
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-.project-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
+/* Project Cards */
 .project-card {
-  font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
+  font-family: 'Courier New', Courier, monospace;
   background-color: var(--black);
   border: 1px solid var(--green);
   color: var(--green);
   padding: 1rem;
   position: relative;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  box-sizing: border-box;
   height: 100%;
 }
-
 
 .project-card:hover {
   background-color: var(--green);
@@ -136,31 +85,18 @@ header h1 {
 
 .project-thumbnail {
   width: 100%;
-  height: auto; /* Maintain the native aspect ratio */
-  background-position: center;
-  background-size: contain; /* Ensure image fits inside the container */
+  height: auto;
   border-bottom: 1px solid var(--green);
-  transition: background-image 0.3s ease;
 }
 
-
-
-.project-card:hover .project-thumbnail {
-  background-image: url('images/Logos_Portfolio_1_ASCII.png');
-}
-
+/* Details */
 .project-details {
   margin-top: 1rem;
   padding-bottom: 3rem;
 }
 
-.project-card a {
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-.project-card a.read-more-button {
+/* Read More Button */
+.read-more-button {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -170,19 +106,11 @@ header h1 {
   font-size: 0.8rem;
   border: none;
   text-transform: uppercase;
+  text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  z-index: 10;
-  text-decoration: none; /* Ensure it looks like a button and not a link */
 }
 
-.project-card a.read-more-button:hover {
-  background-color: var(--black);
-  color: var(--button-contrast);
-  border: 1px solid var(--button-contrast);
-}
-
-
-.project-card a[href*="youtube"]:hover {
+.read-more-button:hover {
   background-color: var(--black);
   color: var(--button-contrast);
   border: 1px solid var(--button-contrast);
@@ -190,21 +118,14 @@ header h1 {
 
 /* Contact Section */
 .contact {
-  padding: 3rem 2rem;
   background-color: var(--gray);
-  text-align: center;
   border-top: 1px solid var(--green);
-}
-
-.contact h3 {
-  color: var(--green);
 }
 
 .contact a {
   color: var(--green);
   text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .contact a:hover {
@@ -215,9 +136,12 @@ header h1 {
 .socials a {
   margin: 0.5rem;
   display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--green);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .socials a:hover {
-  color: var(--black);
   background-color: var(--green);
+  color: var(--black);
 }
