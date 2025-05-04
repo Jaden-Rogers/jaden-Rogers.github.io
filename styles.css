@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* Load the Silkscreen font locally */
+@font-face {
+  font-family: 'Silkscreen';
+  src: url('fonts/Silkscreen/Silkscreen-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Silkscreen';
+  src: url('fonts/Silkscreen/Silkscreen-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 :root {
   --green: #00ff00;
